@@ -18,7 +18,7 @@ function App() {
 
     const onClick = async (e:SyntheticEvent) => {
         const result = await searchCompanies(search);
-        if  (typeof result === "string") {
+        if (typeof result === "string") {
         setServerError(result);
         }
         else if (Array.isArray(result.data)) {
