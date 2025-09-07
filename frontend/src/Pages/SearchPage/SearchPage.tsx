@@ -49,7 +49,6 @@ const SearchPage = (props: Props) => {
     };
     return (
         <div className="App">
-        <Hero />
         <Search
             onSearchSubmit={onSearchSubmit}
             search={search}
