@@ -10,6 +10,7 @@ interface Props {}
 
 const CompanyPage = (props: Props) => {
     let { ticker } = useParams();
+
     const [company, setCompany] = useState<CompanyProfile>();
 
     useEffect(() => {
@@ -28,7 +29,6 @@ const CompanyPage = (props: Props) => {
                     <CompanyDashboard ticker={ticker!}>
                         <Tile title="Company Name" subTitle={company.companyName}/>
                     </CompanyDashboard>
-
                 </div>
             ) : (
                 <div>Company Not Found!</div>

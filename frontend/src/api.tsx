@@ -1,5 +1,5 @@
 import axios from "axios";
-import {CompanyKeyMetrics, CompanyProfile, CompanySearch} from "./company";
+import {CompanyKeyMetrics, CompanyKeyRatios, CompanyProfile, CompanySearch} from "./company";
 
 export interface SearchResponse {
     data: CompanySearch[];
@@ -38,7 +38,6 @@ export const getKeyMetrics = async (query: string) => {
     try {
         const data = await axios.get<CompanyKeyMetrics[]>(
             `https://financialmodelingprep.com/stable/key-metrics-ttm?symbol=${query}&apikey=${process.env.REACT_APP_API_KEY}`
-
         );
         return data;
     } catch (error: any) {
