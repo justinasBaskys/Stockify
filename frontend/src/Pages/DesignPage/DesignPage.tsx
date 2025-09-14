@@ -20,7 +20,7 @@ const DesignPage = (props: Props) => {
                 This is Stockify's design page, that contains various design aspects of the app.
             </h2>
             <RatioList data={testIncomeStatementData} config={tableConfig}/>
-            <Table />
+            <Table data={testIncomeStatementData} config={tableConfig} />
         </>
     );
 };
