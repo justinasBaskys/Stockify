@@ -111,7 +111,6 @@ app.UseCors(x => x
     .AllowAnyMethod()
     .AllowAnyHeader()
     .AllowCredentials()
-    //.WithOrigins("https://localhost:4424")
     .SetIsOriginAllowed(origin => true));
 
 app.UseAuthentication();
